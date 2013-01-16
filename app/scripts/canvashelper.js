@@ -1,12 +1,12 @@
 define([], function() {
 
-	function Canvas() {
+	function CanvasHelper() {
 
 	};
 
-	Canvas.prototype = {};
+	CanvasHelper.prototype = {};
 
-	Canvas.prototype.build = function() {
+	CanvasHelper.prototype.build = function() {
 
 		var c = document.createElement('canvas');
 		c.style.position = 'absolute';
@@ -17,19 +17,19 @@ define([], function() {
 		c.style['background-color'] = 'transparent';
 		c.style['z-index'] = 9999;
 
-		this.canvas = c;
+		this.canvasElm = c;
 
 		return c;
 	};
 
-	Canvas.prototype.init = function() {
-		if( this.c ) {
-			return c;
+	CanvasHelper.prototype.init = function() {
+		if( this.canvasElm ) {
+			return this.canvasElm;
 		}
 
 		return this.build();
 	};
 
-	return Canvas;
+	return CanvasHelper;
 
 });

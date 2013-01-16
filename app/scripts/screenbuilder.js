@@ -1,7 +1,7 @@
 define([
-	'domgeom'
-	, 'canvas'
-	], function(Domgeom, Canvas) {
+	'domgeometry'
+	, 'canvashelper'
+	], function(Domgeom, CanvasHelper) {
 
 		function ScreenBuilder() {
 
@@ -22,9 +22,9 @@ define([
 			// get element geometry
 
 			// make canvas overlay
-			var c = this.canvas = new Canvas();
-			c.init();
-			document.body.appendChild( c.canvas );
+			var canvashelper = this.canvashelper = new CanvasHelper();
+			canvashelper.init();
+			document.body.appendChild( canvashelper.canvasElm );
 			// build canvas blocks
 
 		};
